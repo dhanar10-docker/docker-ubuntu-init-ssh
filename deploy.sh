@@ -11,11 +11,11 @@ if [ ! -d /sys/fs/cgroup/systemd ]; then
 fi
 
 docker build -t ubuntu-init-ssh .
-docker run --rm -ti \
+docker run -d --restart unless-stopped \
+    -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
 	--tmpfs /run \
 	--tmpfs /run/lock \
 	--tmpfs /tmp \
-	-v /sys/fs/cgroup:/sys/fs/cgroup:ro \
-	--cap-add SYS_ADMIN \
-	-p 22:22 \
+    --cap-add SYS_ADMIN \
+    "$@" \
 	ubuntu-init-ssh
