@@ -1,6 +1,6 @@
 # docker-ubuntu-init-ssh
 
-Ubuntu-based container anti-pattern with systemd init and ssh server to mimic a standalone headless system for development and testing purposes
+An Ubuntu-based container anti-pattern with systemd init and ssh server to mimic a standalone headless system for development and testing purposes
 
 ## Requirements
 
@@ -28,7 +28,7 @@ $ ssh user@sandbox.local # Default password: user
 
 ## Notes
 
-The container is deployed in detached mode with restart policy unless-stopped
+Once deployed, the container will run in the background and it will start and stop together with the host unless it is stopped explicitly
 
 ## References
 
