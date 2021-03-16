@@ -12,10 +12,10 @@ fi
 
 docker build -t ubuntu-init-ssh .
 docker run -d --restart unless-stopped \
-    -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+	-v /sys/fs/cgroup:/sys/fs/cgroup:ro \
 	--tmpfs /run \
 	--tmpfs /run/lock \
 	--tmpfs /tmp \
-    --cap-add SYS_ADMIN \
-    "$@" \
+    	--cap-add SYS_ADMIN \
+    	"$@" \
 	ubuntu-init-ssh
