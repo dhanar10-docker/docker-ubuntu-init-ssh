@@ -1,6 +1,6 @@
 # docker-ubuntu-init-ssh
 
-An Ubuntu-based container anti-pattern with systemd init and ssh server to mimic a standalone headless system for development and testing purposes
+An Ubuntu container anti-pattern with systemd init and ssh server to mimic a standalone headless system for development and testing purposes
 
 ## Requirements
 
